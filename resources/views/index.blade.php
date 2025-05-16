@@ -6,16 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies</title>
 </head>
-<body>
-    <ul>
+<body>  
+    
         @foreach ($movies as $movie)
 
-        <li>
-            {{ $movie }}
-        </li>
+        <div class="card">
+            <div class="card-body">
+                <h2>{{ $movie['title'] }}</h2>
+                <h3>{{ $movie['original_title'] }}</h3>
+                <p>Data: {{ $movie['date'] }}</p>
+                <p>Nazionalità: {{ $movie['nationality'] }}</p>
+                <p>Voto: {{ $movie['vote'] }}</p>            
+            </div>
+        </div>
+            
+        
             
         @endforeach
-    </ul>
     
 </body>
 </html>
