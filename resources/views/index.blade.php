@@ -16,11 +16,20 @@
                     <x-slot:original_title>{{ $movie['original_title'] }}</x-slot>
                     <x-slot:date>Data: {{ $movie['date'] }}</x-slot>
                     <x-slot:nationality>Nazionalità: {{ $movie['nationality'] }}</x-slot>
-                    <x-slot:vote>Voto: {{ $movie['vote'] }}</x-slot>
+                    <x-slot:vote>
+                        @for ($i = 1; $i <= 10; $i++)
+                            @if ($i <= $movie['vote'])
+                                <span class="text-warning">&#9733;</span>
+                            @else
+                                <span class="text-secondary">&#9733;</span>
+                            @endif
+                        @endfor
+                        ({{ $movie['vote'] }})
+                    </x-slot:vote>
                 </x-card>
                 
             </div>
-                @endforeach
+            @endforeach
         </div>
     </div> 
 </main>
