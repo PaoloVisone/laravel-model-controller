@@ -1,5 +1,5 @@
 {{-- Card --}}
-        <div class="card shadow-lg border-0 rounded-4 bg-body-secondary" style="height: 18rem;">
+        <div class="card shadow-lg border-2 rounded-4 bg-body-secondary my-2" style="height: 18rem;">
             <div class="card-body text-center">
                 <h2 class="card-title fw-bold">{{ $title }}</h2>
                 <h3 class="card-subtitle mb-2 text-body-secondary fst-italic">{{ $original_title }}</h3>
